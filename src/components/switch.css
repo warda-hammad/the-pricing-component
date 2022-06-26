@@ -1,0 +1,33 @@
+:root {
+    --card-background: hsl(240, 78%, 98%);
+}
+
+label {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    border-radius: 15px;
+    cursor: pointer;
+    background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+label span {
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    top: 1px;
+    right: 5px;
+    border-radius: 50%;
+    background-color: var(--card-background);
+}
+
+input:checked~span {
+    transform: translateX(-18px);
+}

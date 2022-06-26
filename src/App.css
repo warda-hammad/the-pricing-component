@@ -1,0 +1,124 @@
+:root {
+    --Light-Grayish-Blue: hsl(234, 14%, 74%);
+    --card-background: hsl(240, 78%, 98%);
+    --text-color: hsl(233, 13%, 49%);
+    --heading-color: hsl(232, 13%, 33%);
+}
+
+.head {
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--heading-color);
+}
+
+.head .plan-price {
+    display: inline-block;
+    margin: 0 20px;
+    font-size: 15px;
+    color: var(--text-color);
+}
+
+.cards {
+    display: flex;
+    width: 70%;
+    margin: auto;
+    color: var(--text-color);
+}
+
+.cards .card {
+    width: calc((100% /3));
+    margin: 10px;
+    padding: 30px 0;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 2px 2px 15px 0px var(--Light-Grayish-Blue);
+    background-color: var(--card-background);
+}
+
+.cards .active,
+.cards .card:hover {
+    box-shadow: 2px 2px 15px 0px var(--Light-Grayish-Blue);
+    background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: var(--card-background);
+    transform: scale(1.1);
+}
+
+.cards .active p,
+.cards .active .title,
+.cards .card:hover .price {
+    color: var(--card-background);
+}
+
+.cards .active button,
+.cards .card:hover button {
+    background-image: none;
+    color: var(--text-color);
+}
+
+.cards .active .price {
+    color: var(--card-background);
+}
+
+.cards .title {
+    padding: 30px 0;
+}
+
+.cards .paragraph {
+    margin: 25px 0;
+}
+
+.cards p {
+    margin: 0;
+    font-size: 15px;
+    padding: 15px 0;
+    border: 1px solid var(--Light-Grayish-Blue);
+    border-left: none;
+    border-right: none;
+}
+
+.cards .re-border {
+    margin: 0;
+    border: none;
+}
+
+.cards .price {
+    color: var(--heading-color);
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.cards button {
+    border: none;
+    outline: none;
+    width: 80%;
+    padding: 10px;
+    margin: auto;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--card-background);
+    background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+.cards button:hover {
+    background-image: none;
+    color: var(--text-color);
+}
+
+@media (max-width: 375px) {
+    .head {
+        margin-bottom: 20px;
+    }
+    .cards {
+        flex-direction: column;
+        width: 90%;
+    }
+    .cards .card {
+        width: 100%;
+        margin: 20px 0;
+    }
+    .cards .card.active,
+    .cards .card:hover {
+        transform: scale(1);
+    }
+}
